@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CrawlerLibrary.DataConfig
 {
-    public class ConfigItems
+    public class SiteConfigObject
     {
+        public string Name { get; set; }
+    }
+
+    public class SiteParseElement
+    {
+
     }
 }
