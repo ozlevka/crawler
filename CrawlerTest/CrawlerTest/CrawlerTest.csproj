@@ -63,6 +63,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Crawler\CrawlerLibrary\CrawlerLibrary.csproj">
+      <Project>{83015025-21d4-4b8d-b0bb-9cc58d869ef9}</Project>
+      <Name>CrawlerLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
