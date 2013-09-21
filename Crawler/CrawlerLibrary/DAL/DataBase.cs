@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CrawlerLibrary.DAL
 {
-    public abstract class DataBase
+    public interface IDataBase
     {
-
+        void SetConnectionString(string connectionString);
     }
 }

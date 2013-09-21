@@ -7,6 +7,8 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using CrawlerLibrary.DataConfig;
 using System.Collections.Generic;
+using CrawlerLibrary.DAL;
+using CrawlerLibrary.DAL.MongoDB;
 
 namespace CrawlerTest
 {
@@ -83,7 +85,16 @@ namespace CrawlerTest
             collection.RemoveAll();
         }
 
+        [TestMethod]
+        public void DBFactoryLoadTest()
+        {
+            DBFactory factory = new DBFactory();
+            IDataBase db = factory.GetDataBase();
 
+            DataBaseForMongo namedDB = db as DataBaseForMongo;
+
+            Assert.IsNotNull(namedDB);
+        }
     }
 
     public class TestObject
