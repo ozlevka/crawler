@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 
 namespace CrawlerLibrary.DataConfig
 {
-    public class ParseObjectBase
+    public class ConfigItemBase
     {
-        [BsonId]
-        public ObjectId Id { get; set; }
+        public object Id { get; set; }
 
         public string Name { get; set; }
 
-        public string HtmlPath { get; set; }
+        public IList<ConfigItemBase> InnerObjects { get; set; }
 
-        public IList<ParseObjectBase> InnerObjects { get; set; }
+        public ParserType Type { get; set; }
     }
 }

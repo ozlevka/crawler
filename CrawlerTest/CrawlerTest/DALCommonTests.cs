@@ -44,48 +44,6 @@ namespace CrawlerTest
         }
 
         [TestMethod]
-        public void ParseObjectBaseCrudTest()
-        {
-            MongoClient client = new MongoClient();
-            MongoServer server = client.GetServer();
-
-            MongoDatabase db = server.GetDatabase("crawler");
-
-            MongoCollection<ParseObjectBase> collection = db.GetCollection<ParseObjectBase>("configs");
-
-            ParseObjectBase main = new ParseObjectBase
-            {
-                Name = "Main",
-                InnerObjects = new List<ParseObjectBase>()
-            };
-
-            for (int i = 0; i < 10; i++)
-            {
-                ParseObjectBase inner = new ParseObjectBase
-                {
-                    Name = "Inner" + i
-                };
-
-                main.InnerObjects.Add(inner);
-            }
-
-            collection.Insert(main);
-
-            ParseObjectBase pobj = collection.AsQueryable<ParseObjectBase>().Single<ParseObjectBase>(e => e.Name == "Main");
-
-            Assert.IsNotNull(pobj);
-            Assert.AreEqual(pobj.InnerObjects.Count, 10);
-
-            for (int i = 0; i < pobj.InnerObjects.Count; i++)
-            {
-                ParseObjectBase inner = pobj.InnerObjects[i];
-                Assert.AreEqual(inner.Name, "Inner" + i);
-            }
-
-            collection.RemoveAll();
-        }
-
-        [TestMethod]
         public void DBFactoryLoadTest()
         {
             DBFactory factory = new DBFactory();
