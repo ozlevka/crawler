@@ -25,7 +25,7 @@ namespace CrawlerLibrary.ConfigurationModel
 
             if (xmlElement.HasElements)
             {
-                IEnumerable<XElement> innerXmlElements = xmlElement.Descendants("element");
+                IEnumerable<XElement> innerXmlElements = xmlElement.Elements("element");
 
                 if (innerXmlElements != null)
 	            {

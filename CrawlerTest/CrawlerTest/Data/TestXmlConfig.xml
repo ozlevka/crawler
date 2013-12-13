@@ -3,7 +3,7 @@
   <site name="google.com">
     <document name="first" url="http://google.com/first">
       <element name="A" selector="div#id" field="sss">
-        <element name="B" select="a[href]" field="ppp"/>
+        <element name="B" selector="a[href]" field="ppp"/>
       </element>
     </document>
   </site>

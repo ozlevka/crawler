@@ -22,7 +22,7 @@ namespace CrawlerLibrary.ConfigurationModel
             Name = xmlDocument.Attribute("name").Value;
             Url = xmlDocument.Attribute("url").Value;
 
-            var elements = xmlDocument.Descendants("element");
+            var elements = xmlDocument.Elements("element");
             if (elements != null)
             {
                 List<DocumentElement> xmlElements = new List<DocumentElement>();
@@ -30,6 +30,7 @@ namespace CrawlerLibrary.ConfigurationModel
                 foreach (var item in elements)
                 {
                     DocumentElement dElement = new DocumentElement();
+                    xmlElements.Add(dElement.StartParse(item));
                 }
             }
 
