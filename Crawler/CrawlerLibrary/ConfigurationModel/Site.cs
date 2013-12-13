@@ -8,5 +8,6 @@ namespace CrawlerLibrary.ConfigurationModel
 {
     public class Site
     {
+        public IEnumerable<SiteDocument> Documents { get; set; }
     }
 }

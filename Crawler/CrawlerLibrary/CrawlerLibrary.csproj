@@ -49,6 +49,7 @@
     <Compile Include="ConfigurationModel\Site.cs" />
     <Compile Include="ConfigurationModel\SiteDocument.cs" />
     <Compile Include="CrawlerConfiguration\ICrawlerConfiguration.cs" />
+    <Compile Include="CrawlerConfiguration\XmlConfiguration.cs" />
     <Compile Include="IoCContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
