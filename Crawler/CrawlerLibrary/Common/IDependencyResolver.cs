@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrawlerLibrary.ConfigurationModel
+namespace CrawlerLibrary.Common
 {
-    public class DocumentElement
+    interface IDependencyResolver
     {
     }
 }

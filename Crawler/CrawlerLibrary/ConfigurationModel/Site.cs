@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrawlerLibrary.ConfigurationModel
 {
-    class Site
+    public class Site
     {
     }
 }
