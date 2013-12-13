@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CrawlerLibrary.Common
 {
-    interface IDependencyResolver
+    public interface IDependencyResolver
     {
+        public T Resolve<T>() where T : class;
     }
 }
