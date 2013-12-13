@@ -9,7 +9,10 @@ namespace CrawlerLibrary
 {
     public class IoCContainer : IDependencyResolver
     {
-        
+        public IoCContainer()
+        {
+
+        }
 
         public T Resolve<T>() where T : class
         {
