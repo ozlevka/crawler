@@ -30,14 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\packages\HtmlAgilityPack.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Bson">
-      <HintPath>..\..\packages\MongoDB.Bson.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>..\..\packages\MongoDB.Driver.dll</HintPath>
+    <Reference Include="CsQuery">
+      <HintPath>..\..\..\CsQuery\source\CsQuery\bin\Debug\CsQuery.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -49,18 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\Configuration\DataBaseConfiguration.cs" />
-    <Compile Include="DAL\DataBase.cs" />
-    <Compile Include="DAL\DBFactory.cs" />
-    <Compile Include="DAL\MongoDB\MongoDataBase.cs" />
-    <Compile Include="DataConfig\ConfigItems.cs" />
-    <Compile Include="DataConfig\ParserType.cs" />
+    <Compile Include="ConfigurationModel\DocumentElement.cs" />
+    <Compile Include="ConfigurationModel\Site.cs" />
+    <Compile Include="ConfigurationModel\SiteDocument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EngineConfiguration\" />
-    <Folder Include="ParseEngine\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
