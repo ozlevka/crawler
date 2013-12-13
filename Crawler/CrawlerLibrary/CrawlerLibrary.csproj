@@ -43,12 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\IDependencyResolver.cs" />
+    <Compile Include="Common\TinyIoC.cs" />
     <Compile Include="ConfigurationModel\DocumentElement.cs" />
     <Compile Include="ConfigurationModel\Site.cs" />
     <Compile Include="ConfigurationModel\SiteDocument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CrawlerConfiguration\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,6 +8,6 @@ namespace CrawlerLibrary.Common
 {
     public interface IDependencyResolver
     {
-        public T Resolve<T>() where T : class;
+        T Resolve<T>() where T : class;
     }
 }
