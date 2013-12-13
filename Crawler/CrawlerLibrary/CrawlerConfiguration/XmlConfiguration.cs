@@ -63,5 +63,18 @@ namespace CrawlerLibrary.CrawlerConfiguration
             site.StartParse(_xmlDoc);
             return site;
         }
+
+
+        public Site LoadModel(string model)
+        {
+            Parse(model);
+            return LoadModel();
+        }
+
+        public Site LoadModel(Stream modelStream)
+        {
+            Load(modelStream);
+            return LoadModel();
+        }
     }
 }

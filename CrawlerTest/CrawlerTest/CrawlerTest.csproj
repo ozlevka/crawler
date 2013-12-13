@@ -64,6 +64,7 @@
     <Compile Include="DALCommonTests.cs" />
     <Compile Include="TestCrawl.cs" />
     <Compile Include="DependencyInjectionTests.cs" />
+    <Compile Include="XmlConfigurationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -73,6 +74,9 @@
       <Project>{83015025-21d4-4b8d-b0bb-9cc58d869ef9}</Project>
       <Name>CrawlerLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\TestXmlConfig.xml" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
