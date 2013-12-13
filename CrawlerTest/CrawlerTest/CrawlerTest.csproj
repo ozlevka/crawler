@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\..\..\NETLibs\HtmlAgilityPack.1.4.6\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="CsQuery">
+      <HintPath>..\..\..\CsQuery\source\CsQuery\bin\Debug\CsQuery.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Bson, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
