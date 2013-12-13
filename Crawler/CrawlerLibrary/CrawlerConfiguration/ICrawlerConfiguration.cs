@@ -9,6 +9,6 @@ namespace CrawlerLibrary.CrawlerConfiguration
 {
     public interface ICrawlerConfiguration
     {
-        SiteDocument LoadModel();
+        Site LoadModel();
     }
 }
