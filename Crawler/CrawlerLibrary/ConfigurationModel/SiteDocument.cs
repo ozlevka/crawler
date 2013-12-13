@@ -19,9 +19,19 @@ namespace CrawlerLibrary.ConfigurationModel
         internal SiteDocument StartParse(XElement xmlDocument)
         {
             if (xmlDocument == null) throw new ArgumentNullException("xmlDocument can not be null");
-            XAttribute nameAttr = xmlDocument.Attribute("name");
-            XAttribute urlAttr = xmlDocument.Attribute("url");
+            Name = xmlDocument.Attribute("name").Value;
+            Url = xmlDocument.Attribute("url").Value;
 
+            var elements = xmlDocument.Descendants("element");
+            if (elements != null)
+            {
+                List<DocumentElement> xmlElements = new List<DocumentElement>();
+                Elements = xmlElements;
+                foreach (var item in elements)
+                {
+                    DocumentElement dElement = new DocumentElement();
+                }
+            }
 
             return this;
         }
