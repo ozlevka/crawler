@@ -47,6 +47,7 @@
       <HintPath>..\..\packages\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.XML" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -75,6 +76,10 @@
       <Project>{83015025-21d4-4b8d-b0bb-9cc58d869ef9}</Project>
       <Name>CrawlerLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\HtmlAgilityPack\HtmlAgilityPack.csproj">
+      <Project>{193bb801-054f-4729-9d5d-fce1e32594bf}</Project>
+      <Name>HtmlAgilityPack</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\TestXmlConfig.xml" />
@@ -82,6 +87,9 @@
     <Content Include="Data\XPathParsingData.xml">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

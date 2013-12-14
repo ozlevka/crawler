@@ -2,13 +2,15 @@
 <root>
   <site name="issta">
     <document name="flight deals" url="http://www.issta.co.il/deals/flights.aspx">
-      <element name="DealTitle" selector="div#results_list div.result span.title" field=""/>
-      <element name="DealStart" selector="div#results_list div.result div.details ul li:nth-child(2) span.detail_txt" field=""/>
-      <element name="dealReturn" selector="div#results_list div.result div.details ul li:nth-child(3) span.detail_txt" field=""/>
-      <element name="dealCompany" selector="div#results_list div.result li.airline_icon span.detail_txt" field=""/>
-      <element name="dealPrice" selector="div#results_list div.result div.avg_price" field=""/>
-      <element name="dealCurrency" selector="div#results_list div.result div.avg_price span.currency" field=""/>
-      <element name="dealLink" selector="div#results_list div.result div.price_box a" field=""/>
+      <element name="deal" selector="//div[@id='results_list']/div/div[@class='results_right']" field="">
+        <element name="DealTitle" selector="div[@class='result_title']" field=""/>
+        <!--<element name="DealStart" selector="div#results_list div.result div.details ul li:nth-child(2) span.detail_txt" field=""/>
+        <element name="dealReturn" selector="div#results_list div.result div.details ul li:nth-child(3) span.detail_txt" field=""/>
+        <element name="dealCompany" selector="div#results_list div.result li.airline_icon span.detail_txt" field=""/>
+        <element name="dealPrice" selector="div#results_list div.result div.avg_price" field=""/>
+        <element name="dealCurrency" selector="div#results_list div.result div.avg_price span.currency" field=""/>
+        <element name="dealLink" selector="div#results_list div.result div.price_box a" field=""/>-->
+      </element>
     </document>
   </site>
 </root>

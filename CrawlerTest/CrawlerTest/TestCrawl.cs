@@ -9,6 +9,7 @@ using System.IO;
 using System.Collections.Generic;
 using CsQuery.Implementation;
 using CsQuery.Engine;
+using System.Xml.XPath;
 
 namespace CrawlerTest
 {
@@ -69,7 +70,44 @@ namespace CrawlerTest
         [TestMethod]
         public void TestPageWalkingByXPath()
         {
+            IoCContainer container = new IoCContainer();
+            ICrawlerConfiguration config = container.Resolve<ICrawlerConfiguration>();
+            Site site;
+            using (Stream str = File.Open("c:\\dev\\crawler\\CrawlerTest\\CrawlerTest\\Data\\XPathParsingData.xml", FileMode.Open))
+            {
+                site = config.LoadModel(str).First();
+            }
 
+            Assert.IsNull(site.Errors, "Configuration parsing throws errors");
+
+            Dictionary<string, Dictionary<string, List<string>>> result = new Dictionary<string, Dictionary<string, List<string>>>();
+
+            HtmlAgilityPack.HtmlWeb web = new HtmlAgilityPack.HtmlWeb();
+            
+            foreach (SiteDocument document in site.Documents)
+            {
+                HtmlAgilityPack.HtmlDocument htmlDoc = web.Load(document.Url);
+                XPathNavigator navigator = htmlDoc.CreateNavigator();
+                foreach (DocumentElement element in document.Elements)
+                {
+                    ParseElementValue(element, navigator);                        
+                }
+            }
+        }
+
+        private void ParseElementValue(DocumentElement element, XPathNavigator navigator)
+        {
+            var iterator = navigator.Select(element.Selector);
+            foreach (HtmlAgilityPack.HtmlNodeNavigator item in iterator)
+            {
+                if (element.Elements != null)
+                {
+                    foreach (DocumentElement elem in element.Elements)
+                    {
+                        ParseElementValue(elem, item);
+                    }
+                }
+            }
         }
     }
 }
