@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlerLibrary", "Crawler\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlerTest", "CrawlerTest\CrawlerTest\CrawlerTest.csproj", "{E7752DC0-9392-42EC-8CDA-A47F5E4A79C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPathExplorer", "XPathExplorer\XPathExplorer.csproj", "{F78A8D8C-7540-4904-A0F6-CEB708A89FF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{E7752DC0-9392-42EC-8CDA-A47F5E4A79C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7752DC0-9392-42EC-8CDA-A47F5E4A79C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7752DC0-9392-42EC-8CDA-A47F5E4A79C4}.Release|x64.ActiveCfg = Release|Any CPU
+		{F78A8D8C-7540-4904-A0F6-CEB708A89FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F78A8D8C-7540-4904-A0F6-CEB708A89FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F78A8D8C-7540-4904-A0F6-CEB708A89FF9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F78A8D8C-7540-4904-A0F6-CEB708A89FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F78A8D8C-7540-4904-A0F6-CEB708A89FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F78A8D8C-7540-4904-A0F6-CEB708A89FF9}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
