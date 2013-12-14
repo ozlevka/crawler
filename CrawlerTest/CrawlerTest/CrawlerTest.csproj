@@ -51,6 +51,7 @@
       <HintPath>..\..\packages\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.XML" />
   </ItemGroup>
   <Choose>
@@ -70,6 +71,7 @@
     <Compile Include="DALCommonTests.cs" />
     <Compile Include="TestCrawl.cs" />
     <Compile Include="DependencyInjectionTests.cs" />
+    <Compile Include="RSSFeedsTests.cs" />
     <Compile Include="XmlConfigurationTests.cs" />
   </ItemGroup>
   <ItemGroup>
