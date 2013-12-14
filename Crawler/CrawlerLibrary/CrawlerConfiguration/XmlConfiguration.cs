@@ -52,26 +52,38 @@ namespace CrawlerLibrary.CrawlerConfiguration
         {
             _xmlDoc = XDocument.Load(textReader);
         }
-        public Site LoadModel()
+        public IEnumerable<Site> LoadModel()
         {
             if (_xmlDoc == null)
             {
                 throw new ArgumentNullException("Load xml");
             }
 
-            Site site = new Site();
-            site.StartParse(_xmlDoc);
-            return site;
+            IEnumerable<XElement> xmlSites = _xmlDoc.Root.Elements("site");
+            if (xmlSites != null)
+            {
+                List<Site> sites = new List<Site>();
+                foreach (var xmlSite in xmlSites)
+                {
+                    Site s = new Site();
+                    s.StartParse(xmlSite);
+                    sites.Add(s);
+                }
+
+                return sites;
+            }
+
+            return null;
         }
 
 
-        public Site LoadModel(string model)
+        public IEnumerable<Site> LoadModel(string model)
         {
             Parse(model);
             return LoadModel();
         }
 
-        public Site LoadModel(Stream modelStream)
+        public IEnumerable<Site> LoadModel(Stream modelStream)
         {
             Load(modelStream);
             return LoadModel();

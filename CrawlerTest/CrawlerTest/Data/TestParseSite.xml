@@ -1,1 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <site name="issta">
+    <document name="flight deals" url="http://www.issta.co.il/deals/flights.aspx">
+      <element name="DealTitle" selector="div#results_list div.result span.title" field=""/>
+      <element name="DealStart" selector="div#results_list div.result div.details ul li:nth-child(2) span.detail_txt" field=""/>
+      <element name="dealReturn" selector="div#results_list div.result div.details ul li:nth-child(3) span.detail_txt" field=""/>
+      <element name="dealCompany" selector="div#results_list div.result li.airline_icon span.detail_txt" field=""/>
+      <element name="dealPrice" selector="div#results_list div.result div.avg_price" field=""/>
+      <element name="dealCurrency" selector="div#results_list div.result div.avg_price span.currency" field=""/>
+      <element name="dealLink" selector="div#results_list div.result div.price_box a" field=""/>      
+    </document>
+  </site>
+</root>

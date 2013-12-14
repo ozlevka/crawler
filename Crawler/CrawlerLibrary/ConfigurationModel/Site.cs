@@ -12,9 +12,9 @@ namespace CrawlerLibrary.ConfigurationModel
         public IEnumerable<SiteDocument> Documents { get; private set; }
         public IList<Exception> Errors { get; set; }
 
-        public void StartParse(XDocument xmlDocument)
+        public void StartParse(XElement xmlElement)
         {
-            IEnumerable<XElement> docs = xmlDocument.Root.Descendants("document");
+            IEnumerable<XElement> docs = xmlElement.Descendants("document");
             if (docs != null && docs.Count() > 0)
             {
                 List<SiteDocument> siteDocuments = new List<SiteDocument>();

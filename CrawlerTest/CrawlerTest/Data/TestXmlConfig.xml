@@ -2,9 +2,8 @@
 <root>
   <site name="google.com">
     <document name="first" url="http://google.com/first">
-      <element name="A" selector="div#id" field="sss">
-        <element name="B" selector="a[href]" field="ppp"/>
-      </element>
+      <element name="A" selector="div#id" field="sss"/>
+      <element name="B" selector="a[href]" field="ppp"/>
     </document>
   </site>
 </root>
