@@ -16,12 +16,15 @@ namespace CrawlerLibrary.ConfigurationModel
 
         public string FieldName { get; private set; }
 
-
         internal DocumentElement StartParse(XElement xmlElement)
         {
             Name = xmlElement.Attribute("name").Value;
             Selector = xmlElement.Attribute("selector").Value;
-            FieldName = xmlElement.Attribute("field").Value;
+            XAttribute attr = xmlElement.Attribute("field");
+            if (attr != null)
+	        {
+                FieldName = attr.Value;
+	        }                
 
             if (xmlElement.HasElements)
             {

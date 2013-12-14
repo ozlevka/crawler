@@ -78,11 +78,9 @@ namespace CrawlerTest
                 site = config.LoadModel(str).First();
             }
 
-            Assert.IsNull(site.Errors, "Configuration parsing throws errors");
+           Assert.IsNull(site.Errors, "Configuration parsing throws errors");
 
-            Dictionary<string, Dictionary<string, List<string>>> result = new Dictionary<string, Dictionary<string, List<string>>>();
-
-            HtmlAgilityPack.HtmlWeb web = new HtmlAgilityPack.HtmlWeb();
+           HtmlAgilityPack.HtmlWeb web = new HtmlAgilityPack.HtmlWeb();
             
             foreach (SiteDocument document in site.Documents)
             {
@@ -106,6 +104,10 @@ namespace CrawlerTest
                     {
                         ParseElementValue(elem, item);
                     }
+                }
+                else
+                {
+                    //to do fill the result
                 }
             }
         }

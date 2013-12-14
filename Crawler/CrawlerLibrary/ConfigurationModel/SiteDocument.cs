@@ -15,6 +15,8 @@ namespace CrawlerLibrary.ConfigurationModel
         public string Name { get; private set; }
 
         public string Url { get; private set; }
+
+        public string DataType { get; set; }
         
         internal SiteDocument StartParse(XElement xmlDocument)
         {
