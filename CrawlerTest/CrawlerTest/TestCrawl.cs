@@ -65,5 +65,11 @@ namespace CrawlerTest
             }
             return el.InnerText;
         }        
+        
+        [TestMethod]
+        public void TestPageWalkingByXPath()
+        {
+
+        }
     }
 }

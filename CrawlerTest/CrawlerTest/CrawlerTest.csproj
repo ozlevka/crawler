@@ -79,6 +79,9 @@
   <ItemGroup>
     <Content Include="Data\TestXmlConfig.xml" />
     <Content Include="Data\TestParseSite.xml" />
+    <Content Include="Data\XPathParsingData.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
