@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ActiveUp.Net.Imap4">
+      <HintPath>..\..\thirdparty\ActiveUp.Net.Imap4.dll</HintPath>
+    </Reference>
     <Reference Include="CsQuery, Version=1.3.5.200, Culture=neutral, PublicKeyToken=ab50af63106f043f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\thirdparty\CsQuery.dll</HintPath>
@@ -52,6 +55,7 @@
     <Compile Include="ConfigurationModel\DocumentElement.cs" />
     <Compile Include="ConfigurationModel\Site.cs" />
     <Compile Include="ConfigurationModel\SiteDocument.cs" />
+    <Compile Include="Configuration\GMailSection.cs" />
     <Compile Include="CrawlerConfiguration\ICrawlerConfiguration.cs" />
     <Compile Include="CrawlerConfiguration\XmlConfiguration.cs" />
     <Compile Include="IoCContainer.cs" />
