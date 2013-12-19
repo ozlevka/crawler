@@ -99,7 +99,7 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1166, 716);
+            this.mainPanel.Size = new System.Drawing.Size(1166, 682);
             this.mainPanel.TabIndex = 1;
             // 
             // splitContainer1
@@ -115,7 +115,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1163, 713);
+            this.splitContainer1.Size = new System.Drawing.Size(1163, 679);
             this.splitContainer1.SplitterDistance = 321;
             this.splitContainer1.TabIndex = 4;
             // 
@@ -125,7 +125,7 @@
             this.listBoxTags.FormattingEnabled = true;
             this.listBoxTags.Location = new System.Drawing.Point(0, 0);
             this.listBoxTags.Name = "listBoxTags";
-            this.listBoxTags.Size = new System.Drawing.Size(321, 713);
+            this.listBoxTags.Size = new System.Drawing.Size(321, 679);
             this.listBoxTags.TabIndex = 0;
             this.listBoxTags.DoubleClick += new System.EventHandler(this.listBoxTags_DoubleClick);
             // 
@@ -143,8 +143,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.browser);
-            this.splitContainer2.Size = new System.Drawing.Size(838, 713);
-            this.splitContainer2.SplitterDistance = 279;
+            this.splitContainer2.Size = new System.Drawing.Size(838, 679);
+            this.splitContainer2.SplitterDistance = 265;
             this.splitContainer2.TabIndex = 0;
             // 
             // txtHtml
@@ -153,7 +153,7 @@
             this.txtHtml.Location = new System.Drawing.Point(0, 0);
             this.txtHtml.Name = "txtHtml";
             this.txtHtml.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.txtHtml.Size = new System.Drawing.Size(838, 279);
+            this.txtHtml.Size = new System.Drawing.Size(838, 265);
             this.txtHtml.TabIndex = 0;
             this.txtHtml.Text = "";
             // 
@@ -163,7 +163,7 @@
             this.browser.Location = new System.Drawing.Point(0, 0);
             this.browser.MinimumSize = new System.Drawing.Size(20, 20);
             this.browser.Name = "browser";
-            this.browser.Size = new System.Drawing.Size(838, 430);
+            this.browser.Size = new System.Drawing.Size(838, 410);
             this.browser.TabIndex = 0;
             // 
             // horSplitter
@@ -179,7 +179,7 @@
             // 
             this.verSplitter.Location = new System.Drawing.Point(0, 0);
             this.verSplitter.Name = "verSplitter";
-            this.verSplitter.Size = new System.Drawing.Size(3, 716);
+            this.verSplitter.Size = new System.Drawing.Size(3, 682);
             this.verSplitter.TabIndex = 1;
             this.verSplitter.TabStop = false;
             // 
@@ -262,7 +262,7 @@
             // 
             // statuStrip
             // 
-            this.statuStrip.Location = new System.Drawing.Point(0, 765);
+            this.statuStrip.Location = new System.Drawing.Point(0, 731);
             this.statuStrip.Name = "statuStrip";
             this.statuStrip.Size = new System.Drawing.Size(1166, 22);
             this.statuStrip.TabIndex = 2;
@@ -274,14 +274,14 @@
             this.parentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parentPanel.Location = new System.Drawing.Point(0, 49);
             this.parentPanel.Name = "parentPanel";
-            this.parentPanel.Size = new System.Drawing.Size(1166, 716);
+            this.parentPanel.Size = new System.Drawing.Size(1166, 682);
             this.parentPanel.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 787);
+            this.ClientSize = new System.Drawing.Size(1166, 753);
             this.Controls.Add(this.parentPanel);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statuStrip);
