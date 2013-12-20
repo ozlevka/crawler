@@ -59,6 +59,10 @@
     <Compile Include="CrawlerConfiguration\ICrawlerConfiguration.cs" />
     <Compile Include="CrawlerConfiguration\XmlConfiguration.cs" />
     <Compile Include="IoCContainer.cs" />
+    <Compile Include="Mail\IMailFactory.cs" />
+    <Compile Include="Mail\IMailFetcher.cs" />
+    <Compile Include="Mail\IMapFetcher.cs" />
+    <Compile Include="Mail\MailFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

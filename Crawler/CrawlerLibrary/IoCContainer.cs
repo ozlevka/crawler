@@ -1,5 +1,6 @@
 ﻿using CrawlerLibrary.Common;
 using CrawlerLibrary.CrawlerConfiguration;
+using CrawlerLibrary.Mail;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace CrawlerLibrary
         public IoCContainer()
         {
             _container.Register<ICrawlerConfiguration, XmlConfiguration>();
+            _container.Register<IMailFactory, MailFactory>();
         }
 
         public T Resolve<T>() where T : class
